@@ -7,7 +7,15 @@
 </head>
 <body>
   <script>
+		var num1 = parseInt(prompt("숫자1 입력 : ", ""));
+		var num2 = parseInt(prompt("숫자2 입력 : ", ""));
 
+		if(num1 !== null && num2 !==null) sumMulti(num1, num2);
+
+		function sumMulti(x, y){
+			if(x === y)	console.log(x * y);
+			else console.log(x + y)	;
+		}
   </script>
 </body>
 </html>
