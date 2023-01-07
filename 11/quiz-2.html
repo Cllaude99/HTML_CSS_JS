@@ -13,7 +13,21 @@
       border:1px solid #ccc;
       border-radius:50%;      
       box-shadow: 5px 5px 30px 2px #000;
+			animation-name: bear;
+			animation-duration: 3s;
+			perspective: 120px;
     }
+		@keyframes bear{
+			from{
+				transform: rotateY(360deg);
+			}
+			50%{
+				transform: rotateY(-180deg);
+			}
+			to{
+				transform: rotateY(0deg);
+			}
+		}
 	</style>
 </head>
 
