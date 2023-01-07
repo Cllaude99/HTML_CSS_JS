@@ -13,5 +13,21 @@
 </head>
 <body>
 	<h2>3의 배수 찾기</h2>
+	<script>
+		var userNumber = parseInt(prompt("몇 까지 3의 배수를 찾을까요?"), " ");
+		var total = 0;
+
+		if(userNumber !== null){
+			for(var i = 3; i <= userNumber; i += 3){
+				document.write(i + ", ");
+				total++;
+			}
+			document.write("<br>");
+			document.write(userNumber + "까지의 3의 배수의 개수 : " + total);
+		}
+		else{
+			alert("값을 입력하세요!");
+		}
+	</script>
 </body>
 </html>
