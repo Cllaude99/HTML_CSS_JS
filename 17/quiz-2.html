@@ -6,6 +6,30 @@
 	<title>연습문제 2</title>
 </head>
 <body>
-	
+	<input type="text" id="rowValue" size="1">행 
+	<input type="text" id="columnValue" size="1">열
+	<button type="button" onclick="makeTable(); return false;">작성</button>
+	<div id="showArea"></div>
+
+	<script>
+		function makeTable(){
+			var row = document.querySelector('#rowValue').value;
+			var col = document.querySelector('#columnValue').value;
+			var tables = document.createElement("table");
+			
+			for(i = 0; i < row; i++){
+				var tr = document.createElement("tr");
+				for(j = 0; j < col; j++){				
+					var td = document.createElement("td");
+					var texts = document.createTextNode(i + "," + j);
+					td.appendChild(texts);
+					tr.appendChild(td);
+				}
+				tables.appendChild(tr);
+			}
+			
+			document.querySelector('#showArea').appendChild(tables);
+		}
+	</script>
 </body>
 </html>
